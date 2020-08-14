@@ -6,6 +6,9 @@ describe 'GameBoard' do
     let(:idx) { 1 }
     let(:outside_idx) { 9 }
     let(:not_int_idx) { 'z' }
+    board_winner_X = GameBoard.new(['X', 'X', 'X', 3, 4, 5, 6, 7, 8, 9])
+    board_winner_O = GameBoard.new(['O', 'O', 'O', 3, 4, 5, 6, 7, 8, 9])
+    _winner = nil
 
     describe '#display_board' do
         it 'Display an array in trhee lines' do
@@ -30,6 +33,16 @@ describe 'GameBoard' do
 
         it 'should return false if passed a value outside the range of 0 to 8' do
             expect(board.valid_move?(outside_idx)).to eql(false)
+        end
+    end
+
+    describe 'winner?' do
+        it 'should return 1 if if player "X" is the winner' do
+            expect(board_winner_X.winner?(_winner)).to eql(1)
+        end
+
+        it 'should return 1 if if player "O" is the winner' do
+            expect(board_winner_O.winner?(_winner)).to eql(2)
         end
     end
 end
