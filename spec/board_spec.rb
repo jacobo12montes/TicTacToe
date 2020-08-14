@@ -16,11 +16,11 @@ describe 'GameBoard' do
   end
 
   describe '#update_board' do
-    it 'transfor the item on one array' do
+    it 'transform the item on one array' do
       expect(board.update_board(3, 'X')).to eql([1, 2, 3, 'X', 5, 6, 7, 8, 9])
     end
 
-    it 'transfor the item on one array' do
+    it 'transform the item on one array' do
       expect(board.update_board(8, 'O')).to eql([1, 2, 3, 'X', 5, 6, 7, 8, 'O'])
     end
   end
@@ -35,7 +35,7 @@ describe 'GameBoard' do
     end
   end
 
-  describe 'winner?' do
+  describe '#winner?' do
     it 'should return 1 if if player "X" is the winner' do
       expect(board_winner_x.winner?(winner)).to eql(1)
     end
