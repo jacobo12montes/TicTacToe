@@ -23,7 +23,7 @@ class GameBoard
   end
 
   def valid_move?(idx)
-    if idx.between?(0, 8) && @board[idx].is_a?(Integer)
+    if idx.between?(0, 8)
       true
     else
       false
