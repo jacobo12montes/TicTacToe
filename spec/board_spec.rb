@@ -40,7 +40,7 @@ describe 'GameBoard' do
       expect(board_winner_x.winner?(winner)).to eql(1)
     end
 
-    it 'should return 1 if if player "O" is the winner' do
+    it 'should return 2 if if player "O" is the winner' do
       expect(board_winner_o.winner?(winner)).to eql(2)
     end
   end
